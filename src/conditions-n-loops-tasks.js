@@ -21,10 +21,9 @@
  *  0  => true
  *  -5 => false
  */
-function isPositive(/* number */) {
-  throw new Error('Not implemented');
+function isPositive(number) {
+  return number >= 0;
 }
-
 /**
  * Returns the maximum of three numbers without using Array and Math classes methods.
  *
@@ -38,10 +37,18 @@ function isPositive(/* number */) {
  *  -5, 0, 5      => 5
  *  -0.1, 0, 0.2  => 0.2
  */
-function getMaxNumber(/* a, b, c */) {
-  throw new Error('Not implemented');
+function getMaxNumber(a, b, c) {
+  if (a >= b) {
+    if (a >= c) {
+      return a;
+    }
+    return c;
+  }
+  if (b >= c) {
+    return b;
+  }
+  return c;
 }
-
 /**
  * Checks if a queen can capture a king in the next move on an 8x8 chessboard.
  * See more details at https://en.wikipedia.org/wiki/Queen_(chess)
